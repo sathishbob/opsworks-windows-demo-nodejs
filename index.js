@@ -51,6 +51,7 @@ app.get('/', function(req, res) {
                { agent: req.headers['user-agent'],
                  hostname: os.hostname(),
                  os: os.type(),
+                 oscpu: os.cpus(),
                  nodeversion: process.version,
                  time: new Date(),
                  admin: (process.env.APP_ADMIN_EMAIL || "admin@unconfigured-value.com" ),
